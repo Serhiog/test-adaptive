@@ -752,6 +752,12 @@ template {
   height: 130px;
 }
 
+@media (max-width: 605px) {
+  .footer__left {
+    margin-right: 10px;
+  }
+}
+
 .footer__centre {
   -ms-flex-preferred-size: 32%;
       flex-basis: 32%;
