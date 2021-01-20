@@ -1,0 +1,131 @@
+.main {
+
+    padding-left : 30px;
+    padding-right: 30px;
+
+    &__inner {
+        @include flex;
+        align-items   : normal;
+        max-width     : 980px;
+        margin        : 0 auto;
+        border-bottom : 2px solid #CDCDCD;
+        padding-bottom: 20px;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+
+
+    }
+
+    &__left {
+        @include flex;
+        flex-direction : column;
+        justify-content: space-between;
+    }
+
+    &__left-top {
+        flex-basis: 27%;
+        width     : 240px;
+        background: #777777;
+    }
+
+    &__left-bottom {
+        @media (max-width: 601px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__rigth {
+        @include flex;
+        flex-direction: column;
+        flex-grow     : 1;
+        margin-left   : 20px;
+
+
+        @media (max-width: 401px) {
+            margin-left: 0;
+        }
+
+    }
+
+    &__rigth-top {
+        background: #DCDCDC;
+        height    : 300px;
+        width     : 100%;
+    }
+
+    &__list {
+        @include flex;
+        flex-wrap      : wrap;
+        justify-content: flex-start;
+        margin-bottom  : 20px;
+
+        & :nth-child(5n) {
+            margin-right: 0;
+        }
+
+        @media (max-width: 1039px) {
+            & :nth-child(5n) {
+                margin-right: 30px;
+            }
+        }
+
+        @media (max-width: 620px) {
+            & :nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 601px) {
+            & :nth-child(2n) {
+                margin-right: 30px;
+            }
+        }
+
+
+        @media (max-width: 360px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 300px) {
+            & :nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 300px) {
+            & :nth-child(5n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__item {
+        margin-top  : 20px;
+        margin-right: 30px;
+
+        @media (max-width: 300px) {
+            margin-right: 0;
+        }
+    }
+
+    &__bottom-wrapper {
+        @include flex;
+        width: 100%;
+    }
+
+    &__bottom-1 {
+        flex-basis  : 50%;
+        height      : 240px;
+        background  : #DCDCDC;
+        width       : 100px;
+        margin-right: 20px;
+    }
+
+    &__bottom-2 {
+        flex-basis: 50%;
+        height    : 240px;
+        background: #DCDCDC;
+        width     : 100px;
+    }
+}
